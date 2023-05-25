@@ -1,0 +1,635 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用者註冊</title>
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: 投標廠商註冊;
+            --web-view-id:;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        :root {
+            --web-view-ids:;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        # {
+            position: absolute;
+            width: 1366px;
+            height: 1117px;
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            --web-view-name: 投標廠商註冊;
+            --web-view-id:;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        #Fintech {
+            left: 141px;
+            top: 27px;
+            position: absolute;
+            overflow: visible;
+            width: 150px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 42px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #Rectangle_44 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_44 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 150px;
+            left: 0px;
+            top: 100px;
+        }
+
+        #Rectangle_45 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_45 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 366px;
+            height: 233px;
+            left: 141px;
+            top: 164px;
+        }
+
+        #Rectangle_60 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_60 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 734px;
+            height: 788px;
+            left: 540px;
+            top: 198px;
+        }
+
+        #_ {
+            left: 141px;
+            top: 120px;
+            position: absolute;
+            overflow: visible;
+            width: 109px;
+            white-space: nowrap;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #_ba {
+            left: 192px;
+            top: 198px;
+            position: absolute;
+            overflow: visible;
+            width: 109px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #Rectangle_62 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_62 {
+            position: absolute;
+            overflow: visible;
+            width: 5px;
+            height: 55px;
+            left: 168px;
+            top: 184px;
+        }
+
+        #Rectangle_63 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_63 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 684px;
+            top: 274px;
+        }
+
+        #Rectangle_64 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_64 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 369px;
+        }
+
+        #Rectangle_67 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_67 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 464px;
+        }
+
+        #Rectangle_68 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_68 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 559px;
+        }
+
+        #Rectangle_69 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_69 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 654px;
+        }
+
+        #Rectangle_65 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_65 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 805px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target: _;
+            cursor: pointer;
+        }
+
+        #__bg {
+            left: 713px;
+            top: 300px;
+            position: absolute;
+            overflow: visible;
+            width: 50px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bh {
+            left: 713px;
+            top: 395px;
+            position: absolute;
+            overflow: visible;
+            width: 50px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bi {
+            left: 713px;
+            top: 490px;
+            position: absolute;
+            overflow: visible;
+            width: 87px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bj {
+            left: 713px;
+            top: 585px;
+            position: absolute;
+            overflow: visible;
+            width: 87px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bk {
+            left: 713px;
+            top: 680px;
+            position: absolute;
+            overflow: visible;
+            width: 87px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bl {
+            left: 855px;
+            top: 768px;
+            position: absolute;
+            overflow: visible;
+            width: 57px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(255, 255, 255, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bm {
+            left: 848px;
+            top: 920px;
+            position: absolute;
+            overflow: visible;
+            width: 235px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #_bn {
+            left: 696px;
+            top: 920px;
+            position: absolute;
+            overflow: visible;
+            width: 91px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #Rectangle_57 {
+            fill: rgba(51, 61, 61, 1);
+        }
+
+        .Rectangle_57 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 128px;
+            left: 0px;
+            top: 989px;
+        }
+
+        #_Copyright_2020 {
+            left: 537px;
+            top: 1073px;
+            position: absolute;
+            overflow: visible;
+            width: 293px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #Line_1 {
+            fill: transparent;
+            stroke: rgba(255, 255, 255, 1);
+            stroke-width: 1px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_1 {
+            overflow: visible;
+            position: absolute;
+            width: 1086px;
+            height: 1px;
+            left: 140.5px;
+            top: 1044.5px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #check-mark {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .check-mark {
+            overflow: visible;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 1033px;
+            top: 302px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #_bs {
+            left: 1099px;
+            top: 32px;
+            position: absolute;
+            overflow: visible;
+            width: 57px;
+            white-space: nowrap;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(51, 61, 61, 1);
+        }
+
+        #_bt {
+            left: 846px;
+            top: 819px;
+            position: absolute;
+            overflow: visible;
+            width: 75px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bu {
+            left: 192px;
+            top: 266px;
+            position: absolute;
+            overflow: visible;
+            width: 109px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(17, 198, 198, 1);
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            //alert("@ViewBag.utype");
+
+            // 投標廠商
+            if ("@ViewBag.utype" == "0") {
+                $("#touReg").css("color", "rgba(17, 198, 198, 1)");
+            }
+
+            // 招標機關
+            if ("@ViewBag.utype" == "1") {
+                $("#navigation_tl").text("首頁 / 招標機關註冊");
+                $("#con").text("機關名稱 :");
+                $(".Rectangle_62").css("top", "249px");
+                $("#zaoReg").css("color", "rgba(17, 198, 198, 1)");
+                $("#touReg").css("color", "rgba(23, 3, 3, 1)");
+            }
+
+            $("input[name=importantString]").change(function () {
+                var e = $(this).val();
+                e = e.replace(/\s+/g, '');
+                $(this).val(e);
+            });
+        });
+
+        function onReg() {
+            var uid = $("#uid").val();
+            var upass = $("#upass").val();
+            var uconame = $("#uconame").val();
+            var ucode = $("#ucode").val();
+            var umail = $("#umail").val();
+
+            uid = uid.toLowerCase();
+            uconame = uconame.trim();
+
+            if (uid == "" || upass == "") {
+                alert("帳密不能為空");
+                return;
+            }
+            uconame = uconame == "" ? "-1" : uconame;
+            ucode = ucode == "" ? "-1" : ucode;
+            umail = umail == "" ? "-1" : umail;
+            //alert(uid + upass + uconame + ucode + umail);
+
+            $.post("@Url.Action("CreateUser", "Fintech")", { userid: uid, password: upass, mail: umail, code: ucode, name: uconame }, function (data) {
+                if (data == -1) {
+                    alert("Error");
+                } else if (data == 0) {
+                    alert("帳號存在");
+                } else if (data == 1) {
+                    alert("註冊成功");
+                    location.href = "@Url.Action("投標廠商登入", "Home")"
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="">
+        <div id="Fintech">
+            <a asp-controller="Home" asp-action="Homepage" style="text-decoration:none;color:inherit"><span>Fintech</span></a>
+        </div>
+        <svg class="Rectangle_44">
+            <rect id="Rectangle_44" rx="0" ry="0" x="0" y="0" width="1366" height="150">
+            </rect>
+        </svg>
+        <svg class="Rectangle_45">
+            <rect id="Rectangle_45" rx="0" ry="0" x="0" y="0" width="348" height="185">
+            </rect>
+        </svg>
+        <svg class="Rectangle_60">
+            <rect id="Rectangle_60" rx="0" ry="0" x="0" y="0" width="716" height="770">
+            </rect>
+        </svg>
+        <div id="_">
+            <span id="navigation_tl">首頁 / 投標廠商註冊</span>
+        </div>
+        <div id="_ba">
+            <span>
+                <input id="touReg" type="button" style="font-size:18px;background-color:transparent;font-weight: bold;"
+                       onclick="location.href='@Url.Action("投標廠商註冊", "Home", new { utype = "0" })'" value="投標廠商註冊">
+            </span>
+        </div>
+        <svg class="Rectangle_62">
+            <rect id="Rectangle_62" rx="0" ry="0" x="0" y="0" width="5" height="55">
+            </rect>
+        </svg>
+        <svg class="Rectangle_63">
+            <rect id="Rectangle_63" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_64">
+            <rect id="Rectangle_64" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_67">
+            <rect id="Rectangle_67" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_68">
+            <rect id="Rectangle_68" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_69">
+            <rect id="Rectangle_69" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_65">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_65" rx="35" ry="35" x="0" y="0" width="400"
+                  height="75">
+            </rect>
+        </svg>
+        <div id="__bg">
+            <span>帳號 : <input id="uid" type="text" style="font-size: 18px; outline-style:none;" name="importantString"></span>
+        </div>
+        <div id="__bh">
+            <span>密碼 : <input id="upass" type="text" style="font-size: 18px;" name="importantString"></span>
+        </div>
+        <div id="__bi">
+            <span><span id="con">公司名稱 : </span><input id="uconame" type="text" style="font-size: 18px;"></span>
+        </div>
+        <div id="__bj">
+            <span>統一編號 : <input id="ucode" type="number" style="font-size: 18px;"></span>
+        </div>
+        <div id="__bk">
+            <span>電子信箱 : <input id="umail" type="text" style="font-size: 18px;" name="importantString"></span>
+        </div>
+        <div id="_bl">
+            <!-- <span>註冊</span> -->
+        </div>
+        <div id="_bm">
+            <span>已經有帳戶了嗎？<input type="button"
+       style="font-size:18px;background-color:transparent;font-weight: bold;text-decoration:underline;"
+       onclick="location.href='@Url.Action("投標廠商登入", "Home")'" value="立即登入！"></span>
+        </div>
+        <svg class="Rectangle_57">
+            <rect id="Rectangle_57" rx="0" ry="0" x="0" y="0" width="1366" height="128">
+            </rect>
+        </svg>
+        <div id="_Copyright_2020">
+            <span>數位標金平台團隊 Copyright ©2020</span>
+        </div>
+        <svg class="Line_1" viewBox="0 0 1086 1">
+            <path id="Line_1" d="M 0 0 L 1086 0">
+            </path>
+        </svg>
+        <svg class="check-mark" viewBox="0 0 20 20">
+            <path id="check-mark"
+                  d="M 14.42046928405762 6.827422142028809 C 14.72564506530762 7.132596969604492 14.72564506530762 7.627288341522217 14.42046928405762 7.932311534881592 L 9.179374694824219 13.17356204986572 C 8.874198913574219 13.4785852432251 8.379660606384277 13.4785852432251 8.074484825134277 13.17356204986572 L 5.579519271850586 10.67844486236572 C 5.274343490600586 10.37342166900635 5.274343490600586 9.878729820251465 5.579519271850586 9.57370662689209 C 5.884542465209961 9.268529891967773 6.379234313964844 9.268529891967773 6.684257507324219 9.57370662689209 L 8.626853942871094 11.5163049697876 L 13.31556510925293 6.827437877655029 C 13.62074279785156 6.522414684295654 14.11543369293213 6.522414684295654 14.42045593261719 6.827437877655029 Z M 20 10.00048828125 C 20 15.52798652648926 15.52671909332275 20.00048828125 10 20.00048828125 C 4.472499847412109 20.00048828125 0 15.52720737457275 0 10.00048828125 C 0 4.472988128662109 4.473281383514404 0.00048828125 10 0.00048828125 C 15.52750110626221 0.00048828125 20 4.473769664764404 20 10.00048828125 Z M 18.4375 10.00048828125 C 18.4375 5.336620330810547 14.66323947906494 1.562988042831421 10 1.562988042831421 C 5.336132526397705 1.562988042831421 1.5625 5.337249279022217 1.5625 10.00048828125 C 1.5625 14.66435527801514 5.336761474609375 18.43798637390137 10 18.43798637390137 C 14.66386699676514 18.43798637390137 18.4375 14.66372680664063 18.4375 10.00048828125 Z M 18.4375 10.00048828125">
+            </path>
+        </svg>
+        <div id="_bt">
+            <span>
+                <input type="button" style="font-size:36px;background-color:transparent;font-weight: bold;"
+                       onclick="onReg()" value="註冊">
+            </span>
+        </div>
+        <div id="_bu">
+            <span><input id="zaoReg" type="button" style="font-size:18px;background-color:transparent;font-weight: bold;"
+                         onclick="location.href='@Url.Action("投標廠商註冊", "Home", new { utype = "1" })'" value="招標機關註冊"></span>
+        </div>
+    </div>
+</body>
+
+</html>

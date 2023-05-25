@@ -1,0 +1,125 @@
+syntax = "proto3";
+
+option csharp_namespace = "FinTechRPC";
+
+package FRPC;
+
+service FintechService {
+
+	rpc fUserLogin (UserLoginInfo) returns (UserInfo);
+	rpc F_AccCreate (BankInfo) returns (ReturnCode);
+	rpc F_AccSearch (BankInfo) returns (BankRemain);
+	rpc F_AccSearchAll (UserInfo) returns (AccountID);
+	
+	rpc F_GenerateReceipt (ReceiptInfo) returns (ReturnCode);
+	rpc F_SendReceipt (ReceiptSendInfo) returns (ReturnCode);
+
+	rpc F_CaseManagement (UserInfoWT) returns (CaseArray);
+	rpc F_DisableCase (DisableCaseInfo) returns (ReturnCode);
+	rpc F_AddCase (AddCaseInfo) returns (ReturnCode);
+	rpc F_SearchCase (AddCaseInfo) returns (UserInfo);
+
+	rpc F_KeyRequest (KeyInfo) returns (Success);
+
+	rpc fAccountManagement (UserInfo) returns (AccountID);
+
+	rpc fUserCreate (UserRegInfo) returns (ReturnCode);
+}
+
+message None {}
+
+message AddCaseInfo {
+	string caseid = 1;
+	string receipt = 2;
+	string who = 3;
+	string whoami = 4;
+}
+
+message DisableCaseInfo {
+	string caseid = 1;
+	string reason = 2;
+}
+
+message CaseInfo {
+	string caseid = 1;
+	string who = 2;
+	string receipt = 3;
+	string stats = 4;
+	string startdate = 5;
+	string enddate = 6;
+	string amount = 7;
+}
+
+message CaseArray {
+	repeated CaseInfo caseinfo= 1;
+}
+
+message ReceiptSendInfo {
+	string receipt = 1;
+	string who = 2;
+}
+
+message ReceiptInfo {
+	string user = 1;
+	string caseid = 2;
+	string receipt = 3;
+	string bacc1 = 4;
+	string bacc2 = 5;
+	string bacc3 = 6;
+	string amount = 7;
+}
+
+message UserRegInfo {
+	string id = 1;
+	string pass = 2;
+	string email = 3;
+	string ucode = 4;
+	string coname = 5;
+}
+
+message ReturnCode {
+	int32 code = 1;
+}
+
+message AccountID {
+	string str1 = 1;
+	string str2 = 2;
+	string str3 = 3;
+}
+
+message BankInfo {
+	string uid = 1;
+	string bankname = 2;
+	string accname = 3;
+	string accid = 4;
+}
+
+message BankRemain {
+	int32 money = 1;
+}
+
+message KeyInfo {
+	string bankname = 1;
+	string accname = 3;
+	int32 accid = 4;
+	int32 money = 5;
+}
+
+message Success {
+	int32 stat = 1;
+	int32 keyid = 2;
+}
+
+message UserLoginInfo {
+	string id = 1;
+	string pass = 2;
+}
+
+message UserInfo {
+	string userid = 1;
+}
+
+message UserInfoWT {
+	string userid = 1;
+	string utype = 2;
+}

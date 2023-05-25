@@ -1,0 +1,608 @@
+﻿@model FinTech.Models.UserModel
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>憑證產出</title>
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: 憑證產出;
+            --web-view-id:;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        :root {
+            --web-view-ids:;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        # {
+            position: absolute;
+            width: 1366px;
+            height: 1107px;
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            --web-view-name: 憑證產出;
+            --web-view-id:;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        #Rectangle_43 {
+            opacity: 0.38;
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_43 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 1384px;
+            height: 118px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Fintech {
+            left: 141px;
+            top: 27px;
+            position: absolute;
+            overflow: visible;
+            width: 150px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 42px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #Rectangle_44 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_44 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 150px;
+            left: 0px;
+            top: 100px;
+        }
+
+        #Rectangle_60 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_60 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 720px;
+            height: 807px;
+            left: 509px;
+            top: 164px;
+        }
+
+        #_ {
+            left: 141px;
+            top: 120px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #_______ {
+            opacity: 0.5;
+            left: 564px;
+            top: 219px;
+            position: absolute;
+            overflow: visible;
+            width: 215px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: rgba(51, 61, 61, 1);
+        }
+
+        #Rectangle_57 {
+            fill: rgba(51, 61, 61, 1);
+        }
+
+        .Rectangle_57 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 128px;
+            left: 0px;
+            top: 979px;
+        }
+
+        #_Copyright_2020 {
+            left: 537px;
+            top: 1063px;
+            position: absolute;
+            overflow: visible;
+            width: 293px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #Line_1 {
+            fill: transparent;
+            stroke: rgba(255, 255, 255, 1);
+            stroke-width: 1px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_1 {
+            overflow: visible;
+            position: absolute;
+            width: 1086px;
+            height: 1px;
+            left: 140.5px;
+            top: 1034.5px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #__ {
+            left: 920px;
+            top: 32px;
+            position: absolute;
+            overflow: visible;
+            width: 240px;
+            white-space: nowrap;
+            text-align: right;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            cursor: pointer;
+            padding: 4px 4px;
+            margin-left: 8px;
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.90);
+            width: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 9999;
+        }
+
+            .dropdown-content a {
+                color: black;
+                text-decoration: none;
+                display: block;
+                letter-spacing: 0.3px;
+                font-style: normal;
+                font-family: Arial;
+                font-size: 20px;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: rgba(200, 200, 200, 0.90);
+                }
+
+        #__:hover .dropdown-content {
+            display: block;
+        }
+
+        #_bd {
+            left: 638px;
+            top: 326px;
+            position: absolute;
+            overflow: visible;
+            width: 370px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 25px;
+            color: rgba(17, 198, 198, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Rectangle_65 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_65 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 695px;
+            top: 818px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+        }
+
+        .Rectangle_6555 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 695px;
+            top: 728px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+        }
+
+        #_bf55 {
+            left: 728px;
+            top: 734px;
+            position: absolute;
+            overflow: visible;
+            width: 75px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bf {
+            left: 728px;
+            top: 824px;
+            position: absolute;
+            overflow: visible;
+            width: 75px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bg {
+            left: 638px;
+            top: 499px;
+            position: absolute;
+            overflow: visible;
+            width: 81px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bg2 {
+            left: 638px;
+            top: 595px;
+            position: absolute;
+            overflow: visible;
+            width: 81px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        .Rectangle_87 {
+            fill: rgba(255, 255, 255, 1);
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 223px;
+            height: 61px;
+            left: 700px;
+            top: 489px;
+        }
+
+        .Rectangle_88 {
+            fill: rgba(255, 255, 255, 1);
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 223px;
+            height: 61px;
+            left: 700px;
+            top: 585px;
+        }
+
+        #Rectangle_45 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_45 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 213px;
+            height: 316px;
+            left: 110px;
+            top: 158px;
+        }
+
+        #_bj {
+            left: 177px;
+            top: 235px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+        }
+
+        #_bk {
+            left: 175px;
+            top: 290px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+        }
+
+        #_bl {
+            left: 175px;
+            top: 345px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #Rectangle_62 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_62 {
+            position: absolute;
+            overflow: visible;
+            width: 5px;
+            height: 55px;
+            left: 141px;
+            top: 330px;
+        }
+
+        #_bn {
+            left: 175px;
+            top: 400px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var user;
+
+        $(document).ready(function () {
+            $.get("@Url.Action("getUser", "Home")", null, function (data) {
+                user = data;
+                //alert(user);
+            });
+
+            $("#receipt").val("@ViewBag.myReceipt");
+            //alert("@ViewBag.myReceipt");
+
+            $("input[name=importantString]").change(function () {
+                var e = $(this).val();
+                e = e.replace(/\s+/g, '');
+                $(this).val(e.toLowerCase());
+            });
+        });
+
+        function cSend() {
+            var a = $("#receipt").val();
+            var b = $("#toSend").val();
+
+            if (b == "") {
+                alert("請填使用者");
+                return;
+            }
+            if (b == user) {
+                alert("給自己幹嘛?");
+                return;
+            }
+
+            //alert(a + b);
+            $.post("@Url.Action("SendReceipt", "Fintech")", {receipt: a, who: b}, function (data) {
+                if (data == 1) {
+                    alert("已送出");
+                    location.href='@Url.Action("廠商專案管理", "Home")'
+                    return;
+                }
+                if (data == -1) {
+                    alert("使用者不存在");
+                    return;
+                }
+                alert("Error");
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="">
+        <svg class="Rectangle_43">
+            <rect id="Rectangle_43" rx="0" ry="0" x="0" y="0" width="1366" height="100">
+            </rect>
+        </svg>
+        <div id="Fintech">
+            <a asp-controller="Home" asp-action="Homepage" style="text-decoration:none;color:inherit"><span>Fintech</span></a>
+        </div>
+        <svg class="Rectangle_44">
+            <rect id="Rectangle_44" rx="0" ry="0" x="0" y="0" width="1366" height="150">
+            </rect>
+        </svg>
+        <svg class="Rectangle_60">
+            <rect id="Rectangle_60" rx="0" ry="0" x="0" y="0" width="702" height="789">
+            </rect>
+        </svg>
+        <div id="_">
+            <span>
+                首頁 / <input type="button" style="cursor:pointer; font-size:18px;background-color:transparent;font-weight: bold;color: white;"
+                            onclick="location.href='@Url.Action("投標廠商功能", "Home")'" value="投標廠商功能"> / 憑證設定(步驟2之2)
+            </span>
+        </div>
+        <div id="_______">
+            <span>憑證產出 </span>
+        </div>
+        <svg class="Rectangle_57">
+            <rect id="Rectangle_57" rx="0" ry="0" x="0" y="0" width="1366" height="128">
+            </rect>
+        </svg>
+        <div id="_Copyright_2020">
+            <span>數位標金平台團隊 Copyright ©2020</span>
+        </div>
+        <svg class="Line_1" viewBox="0 0 1086 1">
+            <path id="Line_1" d="M 0 0 L 1086 0">
+            </path>
+        </svg>
+        <div id="__">
+            <span>
+                <input type="button" class="dropbtn" value="@Model.UserID" style="outline-style:none; text-align:left; font-size:28px; background-color:transparent; font-weight:bold;" />
+                | <input type="button" style="font-size:28px; background-color:transparent; font-weight: bold;"
+                         onclick="location.href='@Url.Action("UserLogout", "Home")'" value="登出">
+            </span>
+            <div class="dropdown-content">
+                <a onclick="location.href='@Url.Action("投標廠商功能", "Home")'">投標廠商功能表</a>
+                <a onclick="location.href='@Url.Action("招標機關功能", "Home")'">招標機關功能表</a>
+            </div>
+        </div>
+        <div id="_bd">
+            <span>您的憑證已產出。謝謝您的使用。</span>
+        </div>
+        <svg class="Rectangle_6555">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_65" rx="35" ry="35" x="0" y="0" width="400"
+                  height="75">
+            </rect>
+        </svg>
+        <div id="_bf55">
+            <span>
+                <input type="button" style="font-size:36px;background-color:transparent;font-weight: bold;padding:8px 96px 8px 96px"
+                       onclick="cSend()" value="現在傳送">
+            </span>
+        </div>
+        <svg class="Rectangle_65">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_65" rx="35" ry="35" x="0" y="0" width="400"
+                  height="75">
+            </rect>
+        </svg>
+        <div id="_bf">
+            <span>
+                <input type="button" style="font-size:36px;background-color:transparent;font-weight: bold;padding:8px 96px 8px 96px"
+                       onclick="location.href='@Url.Action("投標廠商功能", "Home")'" value="稍後傳送">
+            </span>
+        </div>
+        <div id="_bg">
+            <span>
+                憑證：<input type="text" id="receipt" readonly style="outline-style:none; width:300px; font-size: 18px;z-index:9999;position: relative;margin-left:18px;padding-left:4px" size="16">
+            </span>
+        </div>
+        <div id="_bg2">
+            <span>
+                傳送：<input type="text" id="toSend" placeholder="輸入使用者帳號" style="outline-style: none; width: 300px; font-size: 18px; z-index: 9999; position: relative; margin-left: 18px; padding-left: 4px" size="16" name="importantString">
+            </span>
+        </div>
+        <svg class="Rectangle_87">
+            <rect id="Rectangle_87" rx="8" ry="8" x="0" y="0" width="320" height="43" />
+        </svg>
+        <svg class="Rectangle_88"><rect rx="8" ry="8" x="0" y="0" width="320" height="43" /></svg>
+        <svg class="Rectangle_45">
+            <rect id="Rectangle_45" rx="0" ry="0" x="0" y="0" width="195" height="298">
+            </rect>
+        </svg>
+        <div id="_bj">
+            <span style="cursor:pointer;" onclick="location.href='@Url.Action("帳戶申請", "Home")'">帳戶申請</span>
+        </div>
+        <div id="_bk">
+            <span style="cursor:pointer;" onclick="location.href='@Url.Action("帳戶設定", "Home")'">帳戶設定</span>
+        </div>
+        <div id="_bl">
+            <span>憑證設定</span>
+        </div>
+        <svg class="Rectangle_62">
+            <rect id="Rectangle_62" rx="0" ry="0" x="0" y="0" width="5" height="55">
+            </rect>
+        </svg>
+        <div id="_bn">
+            <span style="cursor:pointer;" onclick="location.href='@Url.Action("廠商專案管理", "Home")'">專案管理</span>
+        </div>
+    </div>
+</body>
+
+</html>

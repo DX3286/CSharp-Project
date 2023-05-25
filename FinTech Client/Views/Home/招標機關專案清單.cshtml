@@ -1,0 +1,1001 @@
+﻿@model FinTech.Models.UserModel
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招標機關專案清單</title>
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: 招標機關專案清單;
+            --web-view-id:;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        :root {
+            --web-view-ids:;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        # {
+            position: absolute;
+            width: 1366px;
+            height: 1117px;
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            --web-view-name: 招標機關專案清單;
+            --web-view-id:;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        #Fintech {
+            left: 141px;
+            top: 27px;
+            position: absolute;
+            overflow: visible;
+            width: 150px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 42px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #Rectangle_44 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_44 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 150px;
+            left: 0px;
+            top: 100px;
+        }
+
+        #Rectangle_45 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_45 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 213px;
+            height: 316px;
+            left: 110px;
+            top: 164px;
+        }
+
+        #Rectangle_60 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_60 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 862px;
+            height: 822px;
+            left: 416px;
+            top: 164px;
+        }
+
+        #_ {
+            left: 110px;
+            top: 131px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #_ba {
+            left: 160px;
+            top: 235px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+        }
+
+        #Rectangle_62 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_62 {
+            position: absolute;
+            overflow: visible;
+            width: 5px;
+            height: 55px;
+            left: 139px;
+            top: 279px;
+        }
+
+        #Rectangle_65 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_65 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 867px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target: _;
+            cursor: pointer;
+        }
+
+
+        #Rectangle_57 {
+            fill: rgba(51, 61, 61, 1);
+        }
+
+        .Rectangle_57 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 128px;
+            left: 0px;
+            top: 989px;
+        }
+
+        #_Copyright_2020 {
+            left: 537px;
+            top: 1073px;
+            position: absolute;
+            overflow: visible;
+            width: 293px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #Line_1 {
+            fill: transparent;
+            stroke: rgba(255, 255, 255, 1);
+            stroke-width: 1px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_1 {
+            overflow: visible;
+            position: absolute;
+            width: 1086px;
+            height: 1px;
+            left: 140.5px;
+            top: 1044.5px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #_bf {
+            left: 861px;
+            top: 881px;
+            position: absolute;
+            overflow: visible;
+            width: 75px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #___ {
+            left: 920px;
+            top: 32px;
+            position: absolute;
+            overflow: visible;
+            width: 240px;
+            height: 37px;
+            text-align: right;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(112, 112, 112, 1);
+            letter-spacing: 0.3px;
+            display: inline-block;
+        }
+        .dropdown-content {
+            cursor: pointer;
+            padding: 4px 4px;
+            margin-left: 8px;
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.90);
+            width: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 9999;
+        }
+
+            .dropdown-content a {
+                color: black;
+                text-decoration: none;
+                display: block;
+                letter-spacing: 0.3px;
+                font-style: normal;
+                font-family: Arial;
+                font-size: 20px;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: rgba(200, 200, 200, 0.90);
+                }
+
+        #___:hover .dropdown-content {
+            display: block;
+        }
+
+        #_bh {
+            left: 565px;
+            top: 291px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bg {
+            left: 465px;
+            top: 380px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bh {
+            left: 465px;
+            top: 535px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bi {
+            left: 470px;
+            top: 690px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bj {
+            left: 731px;
+            top: 380px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bk {
+            left: 731px;
+            top: 535px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bl {
+            left: 731px;
+            top: 690px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bm {
+            left: 985px;
+            top: 380px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bn {
+            left: 985px;
+            top: 535px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bo {
+            left: 985px;
+            top: 690px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Rectangle_98 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_98 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 247px;
+            height: 93px;
+            left: 724px;
+            top: 353px;
+        }
+
+        #Rectangle_103 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_103 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 247px;
+            height: 93px;
+            left: 465px;
+            top: 504px;
+        }
+
+        #Rectangle_104 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_104 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 247px;
+            height: 93px;
+            left: 469px;
+            top: 655px;
+        }
+
+        #_bl {
+            left: 160px;
+            top: 294px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #_bm {
+            left: 160px;
+            top: 353px;
+            position: absolute;
+            overflow: visible;
+            width: 73px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+        }
+
+        #_bn {
+            left: 1165px;
+            top: 294px;
+            position: absolute;
+            overflow: visible;
+            width: 38px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Rectangle_106 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_106 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 72px;
+            height: 71px;
+            left: 1157px;
+            top: 364px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+        }
+
+        #Rectangle_107 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_107 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 72px;
+            height: 71px;
+            left: 1157px;
+            top: 515px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+        }
+
+        #_bq {
+            left: 1172px;
+            top: 671px;
+            position: absolute;
+            overflow: visible;
+            width: 24px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            color: rgba(17, 198, 198, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_br {
+            left: 1173px;
+            top: 522px;
+            position: absolute;
+            overflow: visible;
+            width: 24px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            color: rgba(17, 198, 198, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Rectangle_108 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_108 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 72px;
+            height: 71px;
+            left: 1157px;
+            top: 668px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+        }
+
+        #_bt {
+            left: 1172px;
+            top: 369px;
+            position: absolute;
+            overflow: visible;
+            width: 24px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            color: rgba(17, 198, 198, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Rectangle_117 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_117 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 247px;
+            height: 93px;
+            left: 465px;
+            top: 353px;
+        }
+
+        #Rectangle_118 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_118 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 247px;
+            height: 93px;
+            left: 724px;
+            top: 504px;
+        }
+
+        #Rectangle_119 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_119 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 247px;
+            height: 93px;
+            left: 735px;
+            top: 655px;
+        }
+
+        #_bx {
+            left: 818px;
+            top: 291px;
+            position: absolute;
+            overflow: visible;
+            width: 75px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_______ {
+            opacity: 0.5;
+            left: 439px;
+            top: 211px;
+            position: absolute;
+            overflow: visible;
+            width: 215px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            color: rgba(51, 61, 61, 1);
+        }
+
+        #Rectangle_143 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_143 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 133px;
+            height: 93px;
+            left: 983px;
+            top: 353px;
+        }
+
+        #_b {
+            left: 1004px;
+            top: 294px;
+            position: absolute;
+            overflow: visible;
+            width: 75px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Rectangle_144 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_144 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 133px;
+            height: 93px;
+            left: 983px;
+            top: 655px;
+        }
+
+        #Rectangle_145 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_145 {
+            mix-blend-mode: multiply;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 133px;
+            height: 93px;
+            left: 983px;
+            top: 504px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var user;
+
+        $(document).ready(function () {
+            $.get("@Url.Action("getUser", "Home")", null, function (data) {
+                user = data;
+                //alert(user);
+            });
+
+            $("input[name=importantString]").change(function () {
+                var e = $(this).val();
+                e = e.replace(/\s+/g, '');
+                $(this).val(e);
+            });
+        });
+
+        function mySearch() {
+            var c = $("#caseid").val();
+            var r = $("#receipt").val();
+            var w = $("#who").val();
+
+            if (c == "") { c = "-1"; }
+            if (r == "") { r = "-1"; }
+            if (w == "") { w = "-1"; }
+
+            $.post("@Url.Action("SearchCase", "Fintech")", { caseid: c, receipt: r, who: w , whoami: user}, function (data) {
+                //alert(data);
+                if (data == "null") {
+                    alert("沒有資料");
+                } else {
+
+                    var url = "@Html.Raw(@Url.Action("招標機關專案查詢", "Home", new { caseid = "__caseid__"} ))";
+                    url = url.replace("__caseid__", data);
+                    location.href = url;
+                }
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="">
+        <div id="Fintech">
+            <a asp-controller="Home" asp-action="Homepage" style="text-decoration:none;color:inherit"><span>Fintech</span></a>
+        </div>
+        <svg class="Rectangle_44">
+            <rect id="Rectangle_44" rx="0" ry="0" x="0" y="0" width="1366" height="150">
+            </rect>
+        </svg>
+        <svg class="Rectangle_45">
+            <rect id="Rectangle_45" rx="0" ry="0" x="0" y="0" width="195" height="298">
+            </rect>
+        </svg>
+        <svg class="Rectangle_60">
+            <rect id="Rectangle_60" rx="0" ry="0" x="0" y="0" width="844" height="804">
+            </rect>
+        </svg>
+        <div id="_">
+            <span>
+                首頁 / <input type="button" style="cursor:pointer; font-size:18px;background-color:transparent;font-weight: bold;color: white;"
+                            onclick="location.href='@Url.Action("招標機關功能", "Home")'" value="招標機關功能"> / 專案清單
+            </span><br>
+        </div>
+        <div id="_ba">
+            <span style="cursor:pointer;" onclick="location.href='@Url.Action("招標機關專案設定", "Home")'">專案設定</span>
+        </div>
+        <svg class="Rectangle_62">
+            <rect id="Rectangle_62" rx="0" ry="0" x="0" y="0" width="5" height="55">
+            </rect>
+        </svg>
+        <svg class="Rectangle_65">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_65" rx="35" ry="35" x="0" y="0" width="400"
+                  height="75">
+            </rect>
+        </svg>
+
+
+        <svg class="Rectangle_57">
+            <rect id="Rectangle_57" rx="0" ry="0" x="0" y="0" width="1366" height="128">
+            </rect>
+        </svg>
+        <div id="_Copyright_2020">
+            <span>數位標金平台團隊 Copyright ©2020</span>
+        </div>
+        <svg class="Line_1" viewBox="0 0 1086 1">
+            <path id="Line_1" d="M 0 0 L 1086 0">
+            </path>
+        </svg>
+        <div id="_bf">
+            <span>
+                <input type="button" style="font-size:36px;background-color:transparent;font-weight: bold;"
+                       onclick="location.href='@Url.Action("招標機關功能", "Home")'" value="確認">
+            </span>
+        </div>
+        <div id="___">
+            <span>
+                <input type="button" class="dropbtn" value="@Model.UserID" style="outline-style:none; text-align:left; font-size:28px; background-color:transparent; font-weight:bold;" />
+                | <input type="button" style="font-size:28px; background-color:transparent; font-weight: bold;"
+                         onclick="location.href='@Url.Action("UserLogout", "Home")'" value="登出">
+            </span>
+            <div class="dropdown-content">
+                <a onclick="location.href='@Url.Action("投標廠商功能", "Home")'">投標廠商功能表</a>
+                <a onclick="location.href='@Url.Action("招標機關功能", "Home")'">招標機關功能表</a>
+            </div>
+        </div>
+        <div id="_bh">
+            <span>案號</span>
+        </div>
+        <svg class="Rectangle_98">
+            <rect id="Rectangle_98" rx="20" ry="20" x="0" y="0" width="229" height="75">
+            </rect>
+        </svg>
+        <!--
+        <svg class="Rectangle_103">
+            <rect id="Rectangle_103" rx="20" ry="20" x="0" y="0" width="229" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_104">
+            <rect id="Rectangle_104" rx="20" ry="20" x="0" y="0" width="229" height="75">
+            </rect>
+        </svg>-->
+        <div id="_bl">
+            <span>專案清單</span>
+        </div>
+        <div id="_bm">
+            <span style="cursor:pointer;" onclick="location.href='@Url.Action("招標機關專案管理", "Home")'">專案管理</span>
+        </div>
+        <div id="_bn">
+            <span>查詢</span>
+        </div>
+        <svg class="Rectangle_106">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_106" rx="2" ry="2" x="0" y="0" width="54"
+                  height="53">
+            </rect>
+        </svg>
+        <!--
+        <svg class="Rectangle_107">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_107" rx="2" ry="2" x="0" y="0" width="54"
+                  height="53">
+            </rect>
+        </svg>
+        <div id="_bq">
+            <span>
+                <input type="button"
+                       style="font-size:40px;background-color:transparent;font-weight: bold;color: #11c6c6;z-index:9999;position: relative;"
+                       onclick="javascript:location.href='招標機關專案查詢.html'" value="+">
+            </span>
+        </div>
+        <div id="_br">
+            <span>
+                <input type="button"
+                       style="font-size:40px;background-color:transparent;font-weight: bold;color: #11c6c6;z-index:9999;position: relative;"
+                       onclick="javascript:location.href='招標機關專案查詢.html'" value="+">
+            </span>
+        </div>
+        <svg class="Rectangle_108">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_108" rx="2" ry="2" x="0" y="0" width="54"
+                  height="53">
+            </rect>
+        </svg>-->
+        <div id="_bt">
+            <span>
+                <input type="button"
+                       style="font-size:40px;background-color:transparent;font-weight: bold;color: #11c6c6;z-index:9999;position: relative;"
+                       onclick="mySearch()" value="+">
+            </span>
+        </div>
+        <svg class="Rectangle_117">
+            <rect id="Rectangle_117" rx="20" ry="20" x="0" y="0" width="229" height="75">
+            </rect>
+        </svg>
+        <!--
+        <svg class="Rectangle_118">
+            <rect id="Rectangle_118" rx="20" ry="20" x="0" y="0" width="229" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_119">
+            <rect id="Rectangle_119" rx="20" ry="20" x="0" y="0" width="229" height="75">
+            </rect>
+        </svg>-->
+        <div id="_bx">
+            <span>數位憑證</span>
+        </div>
+        <div id="_______">
+            <span>專案清單 </span>
+        </div>
+        <svg class="Rectangle_143">
+            <rect id="Rectangle_143" rx="20" ry="20" x="0" y="0" width="115" height="75">
+            </rect>
+        </svg>
+        <div id="_b">
+            <span>投標廠商</span>
+        </div>
+        <!--
+        <svg class="Rectangle_144">
+            <rect id="Rectangle_144" rx="20" ry="20" x="0" y="0" width="115" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_145">
+            <rect id="Rectangle_145" rx="20" ry="20" x="0" y="0" width="115" height="75">
+            </rect>
+        </svg>-->
+        <div id="__bg">
+            <span><input id="caseid" name="importantString" type="text" style="font-size: 18px;" name="欄位名稱"></span>
+        </div>
+        <!--
+        <div id="__bh">
+            <span><input type="text" style="font-size: 18px;" name="欄位名稱"></span>
+        </div>
+        <div id="__bi">
+            <span><input type="text" style="font-size: 18px;" name="欄位名稱"></span>
+        </div>-->
+        <div id="__bj">
+            <span><input id="receipt" name="importantString" type="text" style="font-size: 18px;" name="欄位名稱"></span>
+        </div>
+        <!--
+        <div id="__bk">
+            <span><input type="text" style="font-size: 18px;" name="欄位名稱"></span>
+        </div>
+        <div id="__bl">
+            <span><input type="text" style="font-size: 18px;" name="欄位名稱"></span>
+        </div>-->
+        <div id="__bm">
+            <span><input id="who" type="text" style="font-size: 18px;" size="8" name="欄位名稱"></span>
+        </div>
+        <!--
+        <div id="__bn">
+            <span><input type="text" style="font-size: 18px;" size="8" name="欄位名稱"></span>
+        </div>
+        <div id="__bo">
+            <span><input type="text" style="font-size: 18px;" size="8" name="欄位名稱"></span>
+        </div>-->
+    </div>
+</body>
+
+</html>

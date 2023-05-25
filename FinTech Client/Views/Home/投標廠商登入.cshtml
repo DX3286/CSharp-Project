@@ -1,0 +1,528 @@
+﻿@model FinTech.Models.UserModel
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用者登入</title>
+
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: 投標廠商登入;
+            --web-view-id: _;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        :root {
+            --web-view-ids: _;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        #_ {
+            position: absolute;
+            width: 1366px;
+            height: 871px;
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            --web-view-name: 投標廠商登入;
+            --web-view-id: _;
+            --web-application: true;
+            --web-enable-deep-linking: true;
+        }
+
+        #Rectangle_43 {
+            opacity: 0.38;
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_43 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 1384px;
+            height: 118px;
+            left: 5px;
+            top: 0px;
+        }
+
+        #Fintech {
+            left: 141px;
+            top: 27px;
+            position: absolute;
+            overflow: visible;
+            width: 150px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 42px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #Rectangle_44 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_44 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 150px;
+            left: 0px;
+            top: 100px;
+        }
+
+        #Rectangle_45 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_45 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 366px;
+            height: 238px;
+            left: 141px;
+            top: 164px;
+        }
+
+        #Rectangle_60 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_60 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 734px;
+            height: 547px;
+            left: 509px;
+            top: 164px;
+        }
+
+        #Rectangle_57 {
+            fill: rgba(51, 61, 61, 1);
+        }
+
+        .Rectangle_57 {
+            position: absolute;
+            overflow: visible;
+            width: 1366px;
+            height: 128px;
+            left: 0px;
+            top: 748px;
+        }
+
+        #_Copyright_2020 {
+            left: 537px;
+            top: 832px;
+            position: absolute;
+            overflow: visible;
+            width: 293px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #Line_1 {
+            fill: transparent;
+            stroke: rgba(255, 255, 255, 1);
+            stroke-width: 1px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_1 {
+            overflow: visible;
+            position: absolute;
+            width: 1086px;
+            height: 1px;
+            left: 140.5px;
+            top: 803.5px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #__ {
+            left: 141px;
+            top: 120px;
+            position: absolute;
+            overflow: visible;
+            width: 160px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        #Rectangle_62 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_62 {
+            position: absolute;
+            overflow: visible;
+            width: 5px;
+            height: 55px;
+            left: 171px;
+            top: 223px;
+        }
+
+        #Rectangle_63 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_63 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 274px;
+        }
+
+        #Rectangle_64 {
+            fill: rgba(255, 255, 255, 1);
+        }
+
+        .Rectangle_64 {
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 369px;
+        }
+
+        #Rectangle_65 {
+            fill: rgba(17, 198, 198, 1);
+        }
+
+        .Rectangle_65 {
+            filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+            position: absolute;
+            overflow: visible;
+            width: 418px;
+            height: 93px;
+            left: 683px;
+            top: 464px;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+        }
+
+        #__bg {
+            left: 713px;
+            top: 300px;
+            position: absolute;
+            overflow: visible;
+            width: 50px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #__bh {
+            left: 713px;
+            top: 395px;
+            position: absolute;
+            overflow: visible;
+            width: 50px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_br {
+            left: 740px;
+            top: 475px;
+            position: absolute;
+            overflow: visible;
+            width: 57px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(255, 255, 255, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #Group_8 {
+            position: absolute;
+            width: 200px;
+            height: 55px;
+            left: 1085px;
+            top: 23px;
+            overflow: visible;
+        }
+
+        #Rectangle_70 {
+            fill: transparent;
+            stroke: rgba(17, 198, 198, 1);
+            stroke-width: 3px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Rectangle_70 {
+            position: absolute;
+            overflow: visible;
+            width: 200px;
+            height: 55px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #_bl {
+            left: 72px;
+            top: 9px;
+            position: absolute;
+            overflow: visible;
+            width: 57px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(17, 198, 198, 1);
+            letter-spacing: 0.3px;
+        }
+
+        #_bm {
+            left: 993px;
+            top: 32px;
+            position: absolute;
+            overflow: visible;
+            width: 57px;
+            white-space: nowrap;
+            --web-animation: fadein 0.3s ease-out;
+            --web-action-type: view;
+            --web-action-target:;
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            color: rgba(51, 61, 61, 1);
+        }
+
+        #_bn {
+            left: 207px;
+            top: 238px;
+            position: absolute;
+            overflow: visible;
+            width: 109px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(17, 198, 198, 1);
+        }
+
+        #_bo {
+            left: 207px;
+            top: 290px;
+            position: absolute;
+            overflow: visible;
+            width: 109px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(23, 3, 3, 1);
+        }
+
+        #_bp {
+            left: 885px;
+            top: 559px;
+            position: absolute;
+            overflow: visible;
+            width: 199px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        #_bq {
+            left: 683px;
+            top: 559px;
+            position: absolute;
+            overflow: visible;
+            width: 91px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Arial;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(0, 0, 0, 1);
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).on("keyup", function (e) {
+            if (e.key === "Enter") {
+                Login();
+            }
+        });
+
+        $(document).ready(function () {
+            $("input[name=importantString]").change(function () {
+                var e = $(this).val();
+                e = e.replace(/\s+/g, '');
+                $(this).val(e);
+            });
+        });
+
+        function Login() {
+            var uid = $("#myID").val();
+            var upass = $("#myPass").val();
+
+            uid = uid.toLowerCase();
+
+            if (uid == "" || upass == "") {
+                alert("請輸入帳號密碼");
+                return;
+            }
+
+            $.post("@Url.Action("Fintech_Login", "Fintech")", { id: uid, pass: upass }, function (data) {
+                if (data != "") {
+                    location.href = "@Url.Action("投標廠商功能", "Home")"
+                    return;
+                }
+                else {
+                    alert("帳號不存在或密碼有誤");
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="_">
+        <svg class="Rectangle_43">
+            <rect id="Rectangle_43" rx="0" ry="0" x="0" y="0" width="1366" height="100">
+            </rect>
+        </svg>
+        <div id="Fintech">
+            <a asp-controller="Home" asp-action="Homepage" style="text-decoration:none;color:inherit"><span>Fintech</span></a>
+        </div>
+        <svg class="Rectangle_44">
+            <rect id="Rectangle_44" rx="0" ry="0" x="0" y="0" width="1366" height="150">
+            </rect>
+        </svg>
+        <svg class="Rectangle_45">
+            <rect id="Rectangle_45" rx="0" ry="0" x="0" y="0" width="348" height="220">
+            </rect>
+        </svg>
+        <svg class="Rectangle_60">
+            <rect id="Rectangle_60" rx="0" ry="0" x="0" y="0" width="716" height="529">
+            </rect>
+        </svg>
+        <svg class="Rectangle_57">
+            <rect id="Rectangle_57" rx="0" ry="0" x="0" y="0" width="1366" height="128">
+            </rect>
+        </svg>
+        <div id="_Copyright_2020">
+            <span>數位標金平台團隊 Copyright ©2020</span>
+        </div>
+        <svg class="Line_1" viewBox="0 0 1086 1">
+            <path id="Line_1" d="M 0 0 L 1086 0">
+            </path>
+        </svg>
+        <div id="__">
+            <span>首頁 / 使用者登入</span>
+        </div>
+        <svg class="Rectangle_62">
+            <rect id="Rectangle_62" rx="0" ry="0" x="0" y="0" width="5" height="55">
+            </rect>
+        </svg>
+        <svg class="Rectangle_63">
+            <rect id="Rectangle_63" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_64">
+            <rect id="Rectangle_64" rx="37.5" ry="37.5" x="0" y="0" width="400" height="75">
+            </rect>
+        </svg>
+        <svg class="Rectangle_65">
+            <rect onclick="application.goToTargetView(event)" id="Rectangle_65" rx="35" ry="35" x="0" y="0" width="400"
+                  height="75">
+            </rect>
+        </svg>
+        <div id="__bg">
+            <span>帳號 : <input id="myID" type="text" style="font-size:18px;outline-style:none;" name="importantString"></span>
+        </div>
+        <div id="__bh">
+            <span>密碼 : <input id="myPass" type="password" style="font-size:18px;outline-style:none;" name="importantString"></span>
+        </div>
+        <div id="_br">
+            <span>
+                <input type="button"
+                       style="font-size:28px;background-color:transparent;font-weight:bold;color:white;padding:8px 120px 8px 120px;"
+                       onclick="Login()" value="登入">
+            </span>
+        </div>
+        <div id="_bn">
+            <span>使用者登入</span>
+        </div>
+        <div id="_bp">
+            <span>
+                還沒有帳號？<input type="button"
+                             style="font-size:18px;background-color:transparent;font-weight: bold;text-decoration:underline;"
+                             onclick="location.href='@Url.Action("投標廠商註冊", "Home", new { utype = "0" })'" value="立即註冊！">
+            </span>
+        </div>
+        <div id="_bq">
+            <span style="text-decoration:underline;">忘記密碼？</span>
+        </div>
+    </div>
+</body>
+
+</html>
